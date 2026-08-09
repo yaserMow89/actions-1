@@ -3,7 +3,7 @@ name: Generate ascii
 on: [push]
 
 jobs:
-    first_job:
+    ascii_job:
         runs-on: debian-latest
         steps:
 
