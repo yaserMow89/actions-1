@@ -21,7 +21,7 @@ jobs:
               run: grep -i "dragon" dragon.txt
 
             - name: Read file
-              cat dragon.txt
+              run: cat dragon.txt
             
             - name: Checkout Repo Files
               run: ls
