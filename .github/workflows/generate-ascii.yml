@@ -1,4 +1,4 @@
-name: My First example of a workflow
+name: Generate ascii
 
 on: [push]
 
