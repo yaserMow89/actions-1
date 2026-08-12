@@ -13,7 +13,7 @@ jobs:
           run: cowsay -f dragon "I am a DRAGON, run you infidel.....Dracarys" >> dragon.txt
 
         - name: Upload the dragon file
-          uses: actions/upload-artificat@v7
+          uses: actions/upload-artifcat@v7
           with:
             name: dragon-text-file
             path: dragon.txt
@@ -23,7 +23,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: Download the artifiact
-          uses: actions/upload-artifiact@v8
+          uses: actions/upload-artifact@v8
           with:
             name: dragon-text-file
         
