@@ -36,7 +36,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: Download the artifact
-          uses: acctions/download-artifact@v8
+          uses: actions/download-artifact@v8
           with:
             name: dragon-text-file
 
