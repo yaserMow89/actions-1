@@ -28,7 +28,7 @@ jobs:
             name: dragon-text-file
         
         - name: Test File Exists
-          run: grep -i "dragon" dragon-text-file
+          run: grep -i "dragon" dragon.txt
     
     deploy_job_3:
       needs: 
@@ -37,7 +37,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: Read file
-          run: cat dragon-text-file
+          run: cat dragon.txt
         
         - name: Deploy
           run: echo We are deploying
