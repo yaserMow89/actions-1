@@ -12,18 +12,23 @@ jobs:
         - name: Execute Cowsay CMD
           run: cowsay -f dragon "I am a DRAGON, run you infidel.....Dracarys" >> dragon.txt
 
-        - name: sleep job
-          run: sleep 10
+        - name: Upload the dragon file
+          uses: actions/upload-artificat@v7
+          with:
+            name: dragon-text-file
+            path: dragon.txt
 
     test_job_2:
       needs: build_job_1
       runs-on: ubuntu-latest
       steps:
-        - name: sleep for 10 seconds
-          run: sleep 10
+        - name: Download the artifiact
+          uses: actions/upload-artifiact@v8
+          with:
+            name: dragon-text-file
         
         - name: Test File Exists
-          run: grep -i "dragon" dragon.txt
+          run: grep -i "dragon" dragon-text-file
     
     deploy_job_3:
       needs: 
@@ -32,7 +37,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: Read file
-          run: cat dragon.txt
+          run: cat dragon-text-file
         
         - name: Deploy
           run: echo We are deploying
