@@ -25,7 +25,7 @@ jobs:
       - name: Dump Runner context
         env:
           RUNNER_CONTEXT: ${{ toJson(runner) }}
-        run: echo ${{ env.RUNNER_CONTEXT }}
+        run: echo "$RUNNER_CONTEXT"
       
       - name: Dump secret context
         env:
